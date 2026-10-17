@@ -1,6 +1,6 @@
 """DevOps student application: prints student info and serves it over HTTP."""
 import os
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 NAME = os.getenv("STUDENT_NAME", "Akzhol")
 SURNAME = os.getenv("STUDENT_SURNAME", "Tynysbai")
@@ -32,4 +32,4 @@ class Handler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     print(INFO, flush=True)
     print(f"Listening on port {PORT}...", flush=True)
-    HTTPServer(("0.0.0.0", PORT), Handler).serve_forever()
+    ThreadingHTTPServer(("0.0.0.0", PORT), Handler).serve_forever()
