@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    image: tynysbai-akzhol-devops
+    container_name: tynysbai-akzhol-container
+    environment:
+      STUDENT_NAME: Akzhol
+      STUDENT_SURNAME: Tynysbai
+      STUDENT_GROUP: IT2-2306
+      STUDENT_ID: "38313"
+    ports:
+      - "5000:8080"
+    restart: unless-stopped
