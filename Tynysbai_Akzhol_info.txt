@@ -1,0 +1,5 @@
+Name: Akzhol
+Surname: Tynysbai
+Group: IT2-2306
+Student ID: 38313
+Course: DevOps
